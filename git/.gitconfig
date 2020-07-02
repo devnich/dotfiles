@@ -1,0 +1,24 @@
+[user]
+	email = devnich@gmail.com
+	name = Gilgamesh
+[core]
+	autocrlf = input
+	# editor = gedit --wait --new-window
+[push]
+	default = simple
+[diff]
+	algorithm = histogram
+	# tool = meld
+[gui]
+	historybrowser = gitk
+	wmstate = normal
+	# geometry = 1958x1186+366+251 148 157
+[github]
+	user = devnich
+[credential]
+	helper = store
+
+# [cola]
+#	spellcheck = false
+# [merge]
+	# tool = meld

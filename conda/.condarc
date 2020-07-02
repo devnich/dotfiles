@@ -1,0 +1,6 @@
+ssl_verify: true
+channels:
+  - defaults
+  - conda-forge
+channel_priority: strict
+# create_default_packages:

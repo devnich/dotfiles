@@ -1,0 +1,10 @@
+# Global ripgrep configuration options
+
+# Search files defined in .gitignore
+--no-ignore
+
+# Search hidden files
+--hidden
+
+# Search compressed files. This is useful for looking inside bundled Emacs Elisp (*.el.gz)
+--search-zip
