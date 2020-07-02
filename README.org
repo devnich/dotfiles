@@ -1,0 +1,19 @@
+#+STARTUP: showall indent
+#+OPTIONS: tex:t toc:nil
+
+#+TITLE: Dotfiles for Linux and MacOS
+#+AUTHOR: Derek Devnich
+
+* Installation instructions
+  1. Download repository to "~/dotfiles"
+  2. Symlink dotfiles to their correct locations using GNU Stow
+     #+BEGIN_SRC bash
+     cd dotfiles
+     # Perform the stow command for each directory in dotfiles
+     stow zsh
+     #+END_SRC
+
+* References
+  1. https://www.gnu.org/software/stow/
+  2. http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+  3. https://medium.com/@waterkip/managing-my-dotfiles-with-gnu-stow-262d2540a866
