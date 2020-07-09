@@ -30,7 +30,7 @@ bindkey -e
 autoload -Uz compinit
 compinit
 
-# ls colors on BSD
+# ls colors on BSD and MacOS
 LSCOLORS="ExfxcxdxbxeggdabagEhEg"
 export LSCOLORS
 alias ls="ls -G"
@@ -76,5 +76,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# CLAN commands path
-export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"
+# CLAN commands path; some names may conflict with other programs
+# export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"

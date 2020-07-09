@@ -9,7 +9,7 @@
   2. Symlink dotfiles to their correct locations using GNU Stow
      #+BEGIN_SRC bash
      cd dotfiles
-     # Perform the stow command for each directory in dotfiles
+     # Perform the stow command for each directory in ~/dotfiles, e.g.:
      stow zsh
      #+END_SRC
 
