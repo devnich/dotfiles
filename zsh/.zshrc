@@ -76,5 +76,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Nix configuration settings
+# When this script is executed in .zshenv, the default system paths such as
+# /usr/bin/ precede .nix-profile in the $PAT variable. This script should be
+# executed in .zshrc to give precedence to .nix-profile applications.
+if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
 # CLAN commands path; some names may conflict with other programs
 # export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"
