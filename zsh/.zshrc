@@ -2,8 +2,12 @@
 autoload -U colors && colors
 autoload -Uz promptinit
 promptinit
+
 # Built-in prompts defined in /usr/share/zsh/<version>/functions
-prompt oliver
+# "oliver" prompt definition, obtained via `echo $PS1`:
+#     PROMPT='%B%F{default}%n %m:%~%$((COLUMNS-12))(l.%}. )[%h%1(j.%%%j.)%0(?..:%?)]%# %b%f%k'
+# prompt oliver
+PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -77,9 +81,10 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Nix configuration settings
-# When this script is executed in .zshenv, the default system paths such as
-# /usr/bin/ precede .nix-profile in the $PAT variable. This script should be
-# executed in .zshrc to give precedence to .nix-profile applications.
+# This script needs to be executed in .zshrc to give precedence to .nix-profile applications.
+# When the script is executed in .zshenv, the default system paths such as
+# /usr/bin/ are prepended to the $PATH ahead of .nix-profile, which means the
+# shell uses the system default instead of the Nix version.
 if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
 # CLAN commands path; some names may conflict with other programs
