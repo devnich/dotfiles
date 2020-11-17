@@ -16,7 +16,7 @@
 [github]
 	user = devnich
 [credential]
-	helper = store
+	helper = cache
 
 # [cola]
 #	spellcheck = false
