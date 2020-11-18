@@ -1,1 +1,2 @@
 include /Users/gilgamesh/.nix-profile/share/nano/*.nanorc
+include /Users/gilgamesh/dotfiles/nano/sh.nanorc
