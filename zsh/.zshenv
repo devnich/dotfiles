@@ -10,5 +10,8 @@ export EDITOR="emacs"
 # Ripgrep search flags
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
+# Tell GNU utilities (e.g. inkscape) where to find system fonts
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+
 # Allow use of Chrome devtools in Slack app
 export SLACK_DEVELOPER_MENU=true
