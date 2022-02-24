@@ -3,6 +3,7 @@
 	name = Gilgamesh
 [core]
 	autocrlf = input
+	editor = nano -w
 	# editor = gedit --wait --new-window
 [push]
 	default = simple

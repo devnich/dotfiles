@@ -1,8 +1,3 @@
-# Set up the prompt
-autoload -U colors && colors
-autoload -Uz promptinit
-promptinit
-
 # Built-in prompts defined in /usr/share/zsh/<version>/functions
 # "oliver" prompt definition, obtained via `echo $PS1`:
 #     PROMPT='%B%F{default}%n %m:%~%$((COLUMNS-12))(l.%}. )[%h%1(j.%%%j.)%0(?..:%?)]%# %b%f%k'
@@ -30,26 +25,39 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-# ls colors on BSD and MacOS
-LSCOLORS="ExfxcxdxbxeggdabagEhEg"
-export LSCOLORS
-alias ls="ls -G"
+# ls colors, universal settings
+zstyle ':completion:*' list-colors ''
+export CLICOLOR=1
 
 # ls colors on Linux
 # eval "$(dircolors -b)"          # OR:
 # LS_COLORS="di=1;34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=36;43:su=30;41:sg=30;46:tw=1;34;47:ow=1;34;46"
 # export LS_COLORS
-# alias ls="ls --color"
-
-# ls colors, universal settings
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
 # zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# ls colors on BSD and MacOS
+LSCOLORS="ExfxcxdxbxeggdabagEhEg"
+export LSCOLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
+
+# GNU/Linux coreutils (and therefor nix) color alias
+alias ls="ls --color=auto --group-directories-first"
+alias gls="gls -h --color=auto --group-directories-first"
+
+# BSD color alias. Redundant if nix version of ls is installed
+# alias ls="ls -G"
+
+# Set up the prompt
+autoload -U colors && colors
+autoload -Uz promptinit
+promptinit
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+
+# More universal settings
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' format 'Completing %d'
