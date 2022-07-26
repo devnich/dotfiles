@@ -3,26 +3,22 @@
 	name = Gilgamesh
 [core]
 	autocrlf = input
-	editor = nano -w
-	# editor = gedit --wait --new-window
+	editor = nano
+[init]
+	defaultBranch = main
 [push]
 	default = simple
+[pull]
+	rebase = false
 [diff]
 	algorithm = histogram
-	# tool = meld
 [gui]
 	historybrowser = gitk
 	wmstate = normal
-	# geometry = 1958x1186+366+251 148 157
 [github]
 	user = devnich
 [credential]
 	helper = cache
-
-# [cola]
-#	spellcheck = false
-# [merge]
-	# tool = meld
 
 # Github Desktop inserts Large File Storage settings:
 # [filter "lfs"]
