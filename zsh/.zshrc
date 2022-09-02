@@ -2,7 +2,11 @@
 # "oliver" prompt definition, obtained via `echo $PS1`:
 #     PROMPT='%B%F{default}%n %m:%~%$((COLUMNS-12))(l.%}. )[%h%1(j.%%%j.)%0(?..:%?)]%# %b%f%k'
 # prompt oliver
+
+# Show path in prompt
 PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
+# Don't show path in prompt
+# PROMPT='%B%F{default}%n@%m: %b%f%k'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
