@@ -26,3 +26,10 @@
 #	smudge = git-lfs smudge -- %f
 #	process = git-lfs filter-process
 #	required = true
+
+# Unzip Office documents before running diff. For this to work, the project
+# archive must also have a .gitattributes file with the following line:
+#    *.docx diff=zip
+#
+# [diff "zip"]
+#       textconv = unzip -c -a

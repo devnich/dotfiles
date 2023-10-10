@@ -99,5 +99,10 @@ unset __conda_setup
 # shell uses the system default instead of the Nix version.
 if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 
+# Add Ruby Gems to path
+if which ruby >/dev/null && which gem >/dev/null; then
+    PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
+fi
+
 # CLAN commands path; some names may conflict with other programs
 # export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"

@@ -1,0 +1,5 @@
+# Never enforce `E501` (line length violations).
+ignore = ["E501"]
+
+# Use a common cache
+cache-dir = "~/.cache/ruff"
