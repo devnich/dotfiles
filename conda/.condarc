@@ -5,3 +5,4 @@ channels:
 channel_priority: strict
 unsatisfiable_hints: true
 # create_default_packages:
+#allow_conda_downgrades: false
