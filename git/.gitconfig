@@ -3,7 +3,7 @@
 	name = Gilgamesh
 [core]
 	autocrlf = input
-	editor = nano
+	editor = emacs
 [init]
 	defaultBranch = main
 [push]
@@ -21,11 +21,11 @@
 	helper = cache
 
 # Github Desktop inserts Large File Storage settings:
-# [filter "lfs"]
-#	clean = git-lfs clean -- %f
-#	smudge = git-lfs smudge -- %f
-#	process = git-lfs filter-process
-#	required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 # Unzip Office documents before running diff. For this to work, the project
 # archive must also have a .gitattributes file with the following line:
