@@ -23,7 +23,7 @@ pandoc-2.19.2
 poppler-utils-23.08.0
 proj-9.3.0
 ripgrep-13.0.0
-ruby-3.3.0-preview2
+ruby-3.1.4
 ruff-0.0.292
 sox-14.4.2
 stow-2.3.1
