@@ -9,8 +9,8 @@ PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
 # PROMPT='%B%F{default}%n@%m: %b%f%k'
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
 # History configuration
@@ -103,6 +103,9 @@ if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilg
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+
+# Add shell integration for Emulate A Terminal [eat] package in Emacs
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && source "$EAT_SHELL_INTEGRATION_DIR/zsh"
 
 # CLAN commands path; some names may conflict with other programs
 # export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"
