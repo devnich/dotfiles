@@ -1,0 +1,7 @@
+! Add these custom filters in Filters > User Rules
+
+! Block "Latest Research Reports" sidebar block (by property within section tag)
+finance.yahoo.com##section[data-yaft-module="tdv2-applet-ltst-rsrch-rpts"]
+
+! Block "Broker Promo" sidebar block (by id)
+finance.yahoo.com###mrt-node-Col2-2-TradeItLinkBrokerPromo
