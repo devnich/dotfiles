@@ -3,40 +3,58 @@
     "meta": {
       "available": true,
       "broken": false,
-      "description": "An object-oriented language for quick and easy programming",
-      "homepage": "https://www.ruby-lang.org/",
+      "description": "An interactive spell-checking program for Unix",
+      "homepage": "https://www.cs.hmc.edu/~geoff/ispell.html",
       "insecure": false,
-      "knownVulnerabilities": [],
       "license": {
         "deprecated": false,
         "free": true,
-        "fullName": "Ruby License",
+        "fullName": "Unspecified free software license",
         "redistributable": true,
-        "shortName": "ruby",
-        "spdxId": "Ruby",
-        "url": "https://spdx.org/licenses/Ruby.html"
+        "shortName": "free"
       },
-      "maintainers": [
+      "name": "ispell-3.4.05",
+      "outputsToInstall": [
+        "out"
+      ],
+      "position": "/nix/store/3hyrbn4g8r9p833yp2k64kqwf73fbclr-nixpkgs/nixpkgs/pkgs/tools/text/ispell/default.nix:33",
+      "unfree": false,
+      "unsupported": false
+    },
+    "name": "ispell-3.4.05",
+    "outputName": "",
+    "outputs": {
+      "out": null
+    },
+    "pname": "ispell",
+    "system": "x86_64-darwin",
+    "version": "3.4.05"
+  },
+  "1": {
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Transforms TeX and LaTeX into XML/HTML/MathML",
+      "homepage": "https://dlmf.nist.gov/LaTeXML/",
+      "insecure": false,
+      "license": [
         {
-          "email": "rahul@gopinath.org",
-          "github": "vrthra",
-          "githubId": 70410,
-          "name": "Rahul Gopinath"
-        },
-        {
-          "email": "m.fellinger@gmail.com",
-          "github": "manveru",
-          "githubId": 3507,
-          "matrix": "@manveru:matrix.org",
-          "name": "Michael Fellinger"
-        },
-        {
-          "github": "marsam",
-          "githubId": 65531,
-          "name": "Mario Rodas"
+          "deprecated": false,
+          "free": true,
+          "fullName": "Public Domain",
+          "redistributable": true,
+          "shortName": "publicDomain"
         }
       ],
-      "name": "ruby-3.1.4",
+      "mainProgram": "latexml",
+      "maintainers": [
+        {
+          "github": "xworld21",
+          "githubId": 1962985,
+          "name": "Vincenzo Mantova"
+        }
+      ],
+      "name": "perl5.38.2-LaTeXML-0.8.7",
       "outputsToInstall": [
         "out"
       ],
@@ -117,58 +135,46 @@
         "x86_64-windows",
         "i686-windows"
       ],
-      "position": "/nix/store/4vakk69gr86mz8rpwrmh4rxlb62bs5rs-nixpkgs/nixpkgs/pkgs/development/interpreters/ruby/default.nix:284",
+      "position": "/nix/store/j8sh7dkdp9lrlw6qhyj415zzy8vg2ds2-nixpkgs/nixpkgs/pkgs/top-level/perl-packages.nix:13580",
       "unfree": false,
       "unsupported": false
     },
-    "name": "ruby-3.1.4",
+    "name": "perl5.38.2-LaTeXML-0.8.7",
     "outputName": "",
     "outputs": {
       "out": null
     },
-    "pname": "ruby",
+    "pname": "perl5.38.2-LaTeXML",
     "system": "x86_64-darwin",
-    "version": "3.1.4"
+    "version": "0.8.7"
   },
-  "1": {
+  "10": {
     "meta": {
       "available": true,
       "broken": false,
-      "changelog": "https://github.com/htop-dev/htop/blob/3.2.2/ChangeLog",
-      "description": "An interactive process viewer",
-      "homepage": "https://htop.dev",
+      "description": "A HTML validator and `tidier'",
+      "homepage": "http://html-tidy.org",
       "insecure": false,
       "license": {
         "deprecated": false,
         "free": true,
-        "fullName": "GNU General Public License v2.0 only",
+        "fullName": "libpng License",
         "redistributable": true,
-        "shortName": "gpl2Only",
-        "spdxId": "GPL-2.0-only",
-        "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+        "shortName": "libpng",
+        "spdxId": "Libpng",
+        "url": "https://spdx.org/licenses/Libpng.html"
       },
+      "longDescription": "HTML Tidy is a command-line tool and C library that can be\nused to validate and fix HTML data.\n",
+      "mainProgram": "tidy",
       "maintainers": [
         {
-          "email": "rob.vermaas@gmail.com",
-          "github": "rbvermaa",
-          "githubId": 353885,
-          "name": "Rob Vermaas"
-        },
-        {
-          "email": "ricky@elrod.me",
-          "github": "relrod",
-          "githubId": 43930,
-          "name": "Ricky Elrod"
-        },
-        {
-          "email": "sandro.jaeckel@gmail.com",
-          "github": "SuperSandro2000",
-          "githubId": 7258858,
-          "matrix": "@sandro:supersandro.de",
-          "name": "Sandro Jäckel"
+          "email": "ed@cflags.cc",
+          "github": "edwtjo",
+          "githubId": 54799,
+          "name": "Edward Tjörnhammar"
         }
       ],
-      "name": "htop-3.2.2",
+      "name": "html-tidy-5.8.0",
       "outputsToInstall": [
         "out"
       ],
@@ -179,8 +185,8 @@
         "i686-darwin",
         "aarch64-darwin",
         "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
+        "i686-freebsd",
+        "x86_64-freebsd",
         "aarch64-genode",
         "i686-genode",
         "x86_64-genode",
@@ -244,20 +250,97 @@
         "x86_64-windows",
         "i686-windows"
       ],
-      "position": "/nix/store/0lx0cl71zzz87pvm13b2iwzswd9mf0b5-nixpkgs/nixpkgs/pkgs/tools/system/htop/default.nix:52",
+      "position": "/nix/store/0vfw2h7ll21a2fzcggrfwfw9h7a27h1g-nixpkgs/nixpkgs/pkgs/tools/text/html-tidy/default.nix:31",
       "unfree": false,
       "unsupported": false
     },
-    "name": "htop-3.2.2",
+    "name": "html-tidy-5.8.0",
     "outputName": "",
     "outputs": {
       "out": null
     },
-    "pname": "htop",
+    "pname": "html-tidy",
     "system": "x86_64-darwin",
-    "version": "3.2.2"
+    "version": "5.8.0"
   },
-  "10": {
+  "11": {
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "An implementation of the standard Unix documentation system accessed using the man command",
+      "homepage": "http://man-db.nongnu.org",
+      "insecure": false,
+      "license": {
+        "deprecated": true,
+        "free": true,
+        "fullName": "GNU General Public License v2.0",
+        "redistributable": true,
+        "shortName": "gpl2",
+        "spdxId": "GPL-2.0",
+        "url": "https://spdx.org/licenses/GPL-2.0.html"
+      },
+      "mainProgram": "man",
+      "name": "man-db-2.11.2",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "x86_64-solaris",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox"
+      ],
+      "position": "/nix/store/pfx2nyxl1z2bnifcw5amxk0fq4g55pf7-nixpkgs/nixpkgs/pkgs/tools/misc/man-db/default.nix:90",
+      "unfree": false,
+      "unsupported": false
+    },
+    "name": "man-db-2.11.2",
+    "outputName": "",
+    "outputs": {
+      "out": null
+    },
+    "pname": "man-db",
+    "system": "x86_64-darwin",
+    "version": "2.11.2"
+  },
+  "12": {
     "meta": {
       "available": true,
       "broken": false,
@@ -328,7 +411,7 @@
     "system": "x86_64-darwin",
     "version": "1.14.2"
   },
-  "11": {
+  "13": {
     "meta": {
       "available": true,
       "broken": false,
@@ -450,7 +533,7 @@
     "system": "x86_64-darwin",
     "version": "10.02.0"
   },
-  "12": {
+  "14": {
     "meta": {
       "available": true,
       "broken": false,
@@ -544,7 +627,7 @@
     "system": "x86_64-darwin",
     "version": "9.3"
   },
-  "13": {
+  "15": {
     "meta": {
       "available": true,
       "broken": false,
@@ -659,7 +742,7 @@
     "system": "x86_64-darwin",
     "version": "1.2.2"
   },
-  "14": {
+  "16": {
     "meta": {
       "available": true,
       "broken": false,
@@ -748,7 +831,7 @@
     "system": "x86_64-darwin",
     "version": "18.18.2"
   },
-  "15": {
+  "17": {
     "meta": {
       "available": true,
       "broken": false,
@@ -867,7 +950,7 @@
     "system": "x86_64-darwin",
     "version": "9.3.0"
   },
-  "16": {
+  "18": {
     "meta": {
       "available": true,
       "broken": false,
@@ -960,7 +1043,7 @@
     "system": "x86_64-darwin",
     "version": "13.0.0"
   },
-  "17": {
+  "19": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1113,7 +1196,138 @@
     "system": "x86_64-darwin",
     "version": "29.1"
   },
-  "18": {
+  "2": {
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "An object-oriented language for quick and easy programming",
+      "homepage": "https://www.ruby-lang.org/",
+      "insecure": false,
+      "knownVulnerabilities": [],
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "Ruby License",
+        "redistributable": true,
+        "shortName": "ruby",
+        "spdxId": "Ruby",
+        "url": "https://spdx.org/licenses/Ruby.html"
+      },
+      "maintainers": [
+        {
+          "email": "rahul@gopinath.org",
+          "github": "vrthra",
+          "githubId": 70410,
+          "name": "Rahul Gopinath"
+        },
+        {
+          "email": "m.fellinger@gmail.com",
+          "github": "manveru",
+          "githubId": 3507,
+          "matrix": "@manveru:matrix.org",
+          "name": "Michael Fellinger"
+        },
+        {
+          "github": "marsam",
+          "githubId": 65531,
+          "name": "Mario Rodas"
+        }
+      ],
+      "name": "ruby-3.1.4",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "javascript-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "mips-none",
+        "mips64-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/4vakk69gr86mz8rpwrmh4rxlb62bs5rs-nixpkgs/nixpkgs/pkgs/development/interpreters/ruby/default.nix:284",
+      "unfree": false,
+      "unsupported": false
+    },
+    "name": "ruby-3.1.4",
+    "outputName": "",
+    "outputs": {
+      "out": null
+    },
+    "pname": "ruby",
+    "system": "x86_64-darwin",
+    "version": "3.1.4"
+  },
+  "20": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1158,7 +1372,7 @@
     "system": "x86_64-darwin",
     "version": "17.0.7"
   },
-  "19": {
+  "21": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1277,118 +1491,7 @@
     "system": "x86_64-darwin",
     "version": "2.14.2"
   },
-  "2": {
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "Powerful package manager that makes package management reliable and reproducible",
-      "homepage": "https://nixos.org/",
-      "hydraPlatforms": [],
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "GNU Library General Public License v2 or later",
-        "redistributable": true,
-        "shortName": "lgpl2Plus",
-        "spdxId": "LGPL-2.0-or-later",
-        "url": "https://spdx.org/licenses/LGPL-2.0-or-later.html"
-      },
-      "longDescription": "Nix is a powerful package manager for Linux and other Unix systems that\nmakes package management reliable and reproducible. It provides atomic\nupgrades and rollbacks, side-by-side installation of multiple versions of\na package, multi-user package management and easy setup of build\nenvironments.\n",
-      "mainProgram": "nix",
-      "maintainers": [
-        {
-          "email": "edolstra+nixpkgs@gmail.com",
-          "github": "edolstra",
-          "githubId": 1148549,
-          "name": "Eelco Dolstra"
-        },
-        {
-          "email": "meurerbernardo@gmail.com",
-          "github": "lovesegfault",
-          "githubId": 7243783,
-          "keys": [
-            {
-              "fingerprint": "F193 7596 57D5 6DA4 CCD4  786B F4C0 D53B 8D14 C246"
-            }
-          ],
-          "matrix": "@lovesegfault:matrix.org",
-          "name": "Bernardo Meurer"
-        },
-        {
-          "email": "artturin@artturin.com",
-          "github": "Artturin",
-          "githubId": 56650223,
-          "matrix": "@artturin:matrix.org",
-          "name": "Artturi N"
-        }
-      ],
-      "name": "nix-2.18.1",
-      "outputsToInstall": [
-        "out",
-        "man"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
-        "x86_64-solaris",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "loongarch64-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mips-linux",
-        "mips64-linux",
-        "mips64el-linux",
-        "mipsel-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox"
-      ],
-      "position": "/nix/store/1i17s2aw3nhf9f665cwvvx37ngz0a9wx-nixpkgs/nixpkgs/pkgs/tools/package-management/nix/common.nix:239",
-      "unfree": false,
-      "unsupported": false
-    },
-    "name": "nix-2.18.1",
-    "outputName": "",
-    "outputs": {
-      "man": null,
-      "out": null
-    },
-    "pname": "nix",
-    "system": "x86_64-darwin",
-    "version": "2.18.1"
-  },
-  "20": {
+  "22": {
     "meta": {
       "available": true,
       "description": "Sample Rate Converter for audio",
@@ -1439,7 +1542,7 @@
     "system": "x86_64-darwin",
     "version": "14.4.2"
   },
-  "21": {
+  "23": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1558,7 +1661,7 @@
     "system": "x86_64-darwin",
     "version": "7.2"
   },
-  "22": {
+  "24": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1679,7 +1782,7 @@
     "system": "x86_64-darwin",
     "version": "2.19.2"
   },
-  "23": {
+  "25": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1771,7 +1874,7 @@
     "system": "x86_64-darwin",
     "version": "7.1.1-21"
   },
-  "24": {
+  "26": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1896,7 +1999,7 @@
     "system": "x86_64-darwin",
     "version": "2.11.5"
   },
-  "25": {
+  "27": {
     "meta": {
       "available": true,
       "broken": false,
@@ -1998,7 +2101,7 @@
     "system": "x86_64-darwin",
     "version": "3.6.1"
   },
-  "26": {
+  "28": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2118,7 +2221,7 @@
     "system": "x86_64-darwin",
     "version": "1.21.4"
   },
-  "27": {
+  "29": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2143,7 +2246,134 @@
     "system": "x86_64-darwin",
     "version": "2.16.5"
   },
-  "28": {
+  "3": {
+    "meta": {
+      "available": true,
+      "broken": false,
+      "changelog": "https://github.com/htop-dev/htop/blob/3.2.2/ChangeLog",
+      "description": "An interactive process viewer",
+      "homepage": "https://htop.dev",
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "GNU General Public License v2.0 only",
+        "redistributable": true,
+        "shortName": "gpl2Only",
+        "spdxId": "GPL-2.0-only",
+        "url": "https://spdx.org/licenses/GPL-2.0-only.html"
+      },
+      "maintainers": [
+        {
+          "email": "rob.vermaas@gmail.com",
+          "github": "rbvermaa",
+          "githubId": 353885,
+          "name": "Rob Vermaas"
+        },
+        {
+          "email": "ricky@elrod.me",
+          "github": "relrod",
+          "githubId": 43930,
+          "name": "Ricky Elrod"
+        },
+        {
+          "email": "sandro.jaeckel@gmail.com",
+          "github": "SuperSandro2000",
+          "githubId": 7258858,
+          "matrix": "@sandro:supersandro.de",
+          "name": "Sandro Jäckel"
+        }
+      ],
+      "name": "htop-3.2.2",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "aarch64-genode",
+        "i686-genode",
+        "x86_64-genode",
+        "x86_64-solaris",
+        "js-ghcjs",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mipsel-linux",
+        "mips64el-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "mmix-mmixware",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "aarch64_be-none",
+        "aarch64-none",
+        "arm-none",
+        "armv6l-none",
+        "avr-none",
+        "i686-none",
+        "microblaze-none",
+        "microblazeel-none",
+        "msp430-none",
+        "or1k-none",
+        "m68k-none",
+        "powerpc-none",
+        "powerpcle-none",
+        "riscv32-none",
+        "riscv64-none",
+        "rx-none",
+        "s390-none",
+        "s390x-none",
+        "vc4-none",
+        "x86_64-none",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox",
+        "wasm64-wasi",
+        "wasm32-wasi",
+        "x86_64-windows",
+        "i686-windows"
+      ],
+      "position": "/nix/store/0lx0cl71zzz87pvm13b2iwzswd9mf0b5-nixpkgs/nixpkgs/pkgs/tools/system/htop/default.nix:52",
+      "unfree": false,
+      "unsupported": false
+    },
+    "name": "htop-3.2.2",
+    "outputName": "",
+    "outputs": {
+      "out": null
+    },
+    "pname": "htop",
+    "system": "x86_64-darwin",
+    "version": "3.2.2"
+  },
+  "30": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2263,7 +2493,7 @@
     "system": "x86_64-darwin",
     "version": "2.1.1"
   },
-  "29": {
+  "31": {
     "meta": {
       "available": true,
       "description": "A tool for managing the installation of multiple software packages in the same run-time directory tree",
@@ -2334,7 +2564,171 @@
     "system": "x86_64-darwin",
     "version": "2.3.1"
   },
-  "3": {
+  "32": {
+    "meta": {
+      "available": true,
+      "description": "Network traffic visualizer",
+      "homepage": "http://jnettop.kubs.info/",
+      "license": {
+        "fullName": "GNU General Public License v2.0 or later",
+        "shortName": "gpl2Plus",
+        "spdxId": "GPL-2.0-or-later",
+        "url": "https://spdx.org/licenses/GPL-2.0-or-later.html"
+      },
+      "longDescription": "Jnettop is a traffic visualiser, which captures traffic going\nthrough the host it is running from and displays streams sorted\nby bandwidth they use.\n",
+      "name": "jnettop-0.13.0",
+      "outputsToInstall": [
+        "out"
+      ],
+      "platforms": [
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "mipsel-linux",
+        "i686-cygwin",
+        "i686-freebsd",
+        "i686-linux",
+        "i686-netbsd",
+        "i686-openbsd",
+        "x86_64-cygwin",
+        "x86_64-freebsd",
+        "x86_64-linux",
+        "x86_64-netbsd",
+        "x86_64-openbsd",
+        "x86_64-solaris",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux"
+      ],
+      "position": "/nix/store/6bqk8grnx5kckc1j720i7bv3xlc715mb-nixpkgs-20.09pre231837.2cd2e7267e5/nixpkgs/pkgs/tools/networking/jnettop/default.nix:25"
+    },
+    "name": "jnettop-0.13.0",
+    "outputName": "",
+    "outputs": {
+      "out": null
+    },
+    "pname": "jnettop",
+    "system": "x86_64-darwin",
+    "version": "0.13.0"
+  },
+  "4": {
+    "meta": {
+      "available": true,
+      "broken": false,
+      "description": "Powerful package manager that makes package management reliable and reproducible",
+      "homepage": "https://nixos.org/",
+      "hydraPlatforms": [],
+      "insecure": false,
+      "license": {
+        "deprecated": false,
+        "free": true,
+        "fullName": "GNU Library General Public License v2 or later",
+        "redistributable": true,
+        "shortName": "lgpl2Plus",
+        "spdxId": "LGPL-2.0-or-later",
+        "url": "https://spdx.org/licenses/LGPL-2.0-or-later.html"
+      },
+      "longDescription": "Nix is a powerful package manager for Linux and other Unix systems that\nmakes package management reliable and reproducible. It provides atomic\nupgrades and rollbacks, side-by-side installation of multiple versions of\na package, multi-user package management and easy setup of build\nenvironments.\n",
+      "mainProgram": "nix",
+      "maintainers": [
+        {
+          "email": "edolstra+nixpkgs@gmail.com",
+          "github": "edolstra",
+          "githubId": 1148549,
+          "name": "Eelco Dolstra"
+        },
+        {
+          "email": "meurerbernardo@gmail.com",
+          "github": "lovesegfault",
+          "githubId": 7243783,
+          "keys": [
+            {
+              "fingerprint": "F193 7596 57D5 6DA4 CCD4  786B F4C0 D53B 8D14 C246"
+            }
+          ],
+          "matrix": "@lovesegfault:matrix.org",
+          "name": "Bernardo Meurer"
+        },
+        {
+          "email": "artturin@artturin.com",
+          "github": "Artturin",
+          "githubId": 56650223,
+          "matrix": "@artturin:matrix.org",
+          "name": "Artturi N"
+        }
+      ],
+      "name": "nix-2.18.1",
+      "outputsToInstall": [
+        "out",
+        "man"
+      ],
+      "platforms": [
+        "i686-cygwin",
+        "x86_64-cygwin",
+        "x86_64-darwin",
+        "i686-darwin",
+        "aarch64-darwin",
+        "armv7a-darwin",
+        "i686-freebsd13",
+        "x86_64-freebsd13",
+        "x86_64-solaris",
+        "aarch64-linux",
+        "armv5tel-linux",
+        "armv6l-linux",
+        "armv7a-linux",
+        "armv7l-linux",
+        "i686-linux",
+        "loongarch64-linux",
+        "m68k-linux",
+        "microblaze-linux",
+        "microblazeel-linux",
+        "mips-linux",
+        "mips64-linux",
+        "mips64el-linux",
+        "mipsel-linux",
+        "powerpc64-linux",
+        "powerpc64le-linux",
+        "riscv32-linux",
+        "riscv64-linux",
+        "s390-linux",
+        "s390x-linux",
+        "x86_64-linux",
+        "aarch64-netbsd",
+        "armv6l-netbsd",
+        "armv7a-netbsd",
+        "armv7l-netbsd",
+        "i686-netbsd",
+        "m68k-netbsd",
+        "mipsel-netbsd",
+        "powerpc-netbsd",
+        "riscv32-netbsd",
+        "riscv64-netbsd",
+        "x86_64-netbsd",
+        "i686-openbsd",
+        "x86_64-openbsd",
+        "x86_64-redox"
+      ],
+      "position": "/nix/store/1i17s2aw3nhf9f665cwvvx37ngz0a9wx-nixpkgs/nixpkgs/pkgs/tools/package-management/nix/common.nix:239",
+      "unfree": false,
+      "unsupported": false
+    },
+    "name": "nix-2.18.1",
+    "outputName": "",
+    "outputs": {
+      "man": null,
+      "out": null
+    },
+    "pname": "nix",
+    "system": "x86_64-darwin",
+    "version": "2.18.1"
+  },
+  "5": {
     "meta": {
       "available": true,
       "badPlatforms": [
@@ -2426,91 +2820,7 @@
     "system": "x86_64-darwin",
     "version": "0.0.292"
   },
-  "30": {
-    "meta": {
-      "available": true,
-      "description": "Network traffic visualizer",
-      "homepage": "http://jnettop.kubs.info/",
-      "license": {
-        "fullName": "GNU General Public License v2.0 or later",
-        "shortName": "gpl2Plus",
-        "spdxId": "GPL-2.0-or-later",
-        "url": "https://spdx.org/licenses/GPL-2.0-or-later.html"
-      },
-      "longDescription": "Jnettop is a traffic visualiser, which captures traffic going\nthrough the host it is running from and displays streams sorted\nby bandwidth they use.\n",
-      "name": "jnettop-0.13.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "mipsel-linux",
-        "i686-cygwin",
-        "i686-freebsd",
-        "i686-linux",
-        "i686-netbsd",
-        "i686-openbsd",
-        "x86_64-cygwin",
-        "x86_64-freebsd",
-        "x86_64-linux",
-        "x86_64-netbsd",
-        "x86_64-openbsd",
-        "x86_64-solaris",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux"
-      ],
-      "position": "/nix/store/6bqk8grnx5kckc1j720i7bv3xlc715mb-nixpkgs-20.09pre231837.2cd2e7267e5/nixpkgs/pkgs/tools/networking/jnettop/default.nix:25"
-    },
-    "name": "jnettop-0.13.0",
-    "outputName": "",
-    "outputs": {
-      "out": null
-    },
-    "pname": "jnettop",
-    "system": "x86_64-darwin",
-    "version": "0.13.0"
-  },
-  "31": {
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "An interactive spell-checking program for Unix",
-      "homepage": "https://www.cs.hmc.edu/~geoff/ispell.html",
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "Unspecified free software license",
-        "redistributable": true,
-        "shortName": "free"
-      },
-      "name": "ispell-3.4.05",
-      "outputsToInstall": [
-        "out"
-      ],
-      "position": "/nix/store/3hyrbn4g8r9p833yp2k64kqwf73fbclr-nixpkgs/nixpkgs/pkgs/tools/text/ispell/default.nix:33",
-      "unfree": false,
-      "unsupported": false
-    },
-    "name": "ispell-3.4.05",
-    "outputName": "",
-    "outputs": {
-      "out": null
-    },
-    "pname": "ispell",
-    "system": "x86_64-darwin",
-    "version": "3.4.05"
-  },
-  "4": {
+  "6": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2636,7 +2946,7 @@
     "system": "x86_64-darwin",
     "version": "23.08.0"
   },
-  "5": {
+  "7": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2772,7 +3082,7 @@
     "system": "x86_64-darwin",
     "version": "10.11.5"
   },
-  "6": {
+  "8": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2902,7 +3212,7 @@
     "system": "x86_64-darwin",
     "version": "3.92"
   },
-  "7": {
+  "9": {
     "meta": {
       "available": true,
       "broken": false,
@@ -2982,197 +3292,5 @@
     "pname": "age",
     "system": "x86_64-darwin",
     "version": "1.4.0-rc0"
-  },
-  "8": {
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "A HTML validator and `tidier'",
-      "homepage": "http://html-tidy.org",
-      "insecure": false,
-      "license": {
-        "deprecated": false,
-        "free": true,
-        "fullName": "libpng License",
-        "redistributable": true,
-        "shortName": "libpng",
-        "spdxId": "Libpng",
-        "url": "https://spdx.org/licenses/Libpng.html"
-      },
-      "longDescription": "HTML Tidy is a command-line tool and C library that can be\nused to validate and fix HTML data.\n",
-      "mainProgram": "tidy",
-      "maintainers": [
-        {
-          "email": "ed@cflags.cc",
-          "github": "edwtjo",
-          "githubId": 54799,
-          "name": "Edward Tjörnhammar"
-        }
-      ],
-      "name": "html-tidy-5.8.0",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd",
-        "x86_64-freebsd",
-        "aarch64-genode",
-        "i686-genode",
-        "x86_64-genode",
-        "x86_64-solaris",
-        "js-ghcjs",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "mmix-mmixware",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "aarch64_be-none",
-        "aarch64-none",
-        "arm-none",
-        "armv6l-none",
-        "avr-none",
-        "i686-none",
-        "microblaze-none",
-        "microblazeel-none",
-        "msp430-none",
-        "or1k-none",
-        "m68k-none",
-        "powerpc-none",
-        "powerpcle-none",
-        "riscv32-none",
-        "riscv64-none",
-        "rx-none",
-        "s390-none",
-        "s390x-none",
-        "vc4-none",
-        "x86_64-none",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox",
-        "wasm64-wasi",
-        "wasm32-wasi",
-        "x86_64-windows",
-        "i686-windows"
-      ],
-      "position": "/nix/store/0vfw2h7ll21a2fzcggrfwfw9h7a27h1g-nixpkgs/nixpkgs/pkgs/tools/text/html-tidy/default.nix:31",
-      "unfree": false,
-      "unsupported": false
-    },
-    "name": "html-tidy-5.8.0",
-    "outputName": "",
-    "outputs": {
-      "out": null
-    },
-    "pname": "html-tidy",
-    "system": "x86_64-darwin",
-    "version": "5.8.0"
-  },
-  "9": {
-    "meta": {
-      "available": true,
-      "broken": false,
-      "description": "An implementation of the standard Unix documentation system accessed using the man command",
-      "homepage": "http://man-db.nongnu.org",
-      "insecure": false,
-      "license": {
-        "deprecated": true,
-        "free": true,
-        "fullName": "GNU General Public License v2.0",
-        "redistributable": true,
-        "shortName": "gpl2",
-        "spdxId": "GPL-2.0",
-        "url": "https://spdx.org/licenses/GPL-2.0.html"
-      },
-      "mainProgram": "man",
-      "name": "man-db-2.11.2",
-      "outputsToInstall": [
-        "out"
-      ],
-      "platforms": [
-        "i686-cygwin",
-        "x86_64-cygwin",
-        "x86_64-darwin",
-        "i686-darwin",
-        "aarch64-darwin",
-        "armv7a-darwin",
-        "i686-freebsd13",
-        "x86_64-freebsd13",
-        "x86_64-solaris",
-        "aarch64-linux",
-        "armv5tel-linux",
-        "armv6l-linux",
-        "armv7a-linux",
-        "armv7l-linux",
-        "i686-linux",
-        "m68k-linux",
-        "microblaze-linux",
-        "microblazeel-linux",
-        "mipsel-linux",
-        "mips64el-linux",
-        "powerpc64-linux",
-        "powerpc64le-linux",
-        "riscv32-linux",
-        "riscv64-linux",
-        "s390-linux",
-        "s390x-linux",
-        "x86_64-linux",
-        "aarch64-netbsd",
-        "armv6l-netbsd",
-        "armv7a-netbsd",
-        "armv7l-netbsd",
-        "i686-netbsd",
-        "m68k-netbsd",
-        "mipsel-netbsd",
-        "powerpc-netbsd",
-        "riscv32-netbsd",
-        "riscv64-netbsd",
-        "x86_64-netbsd",
-        "i686-openbsd",
-        "x86_64-openbsd",
-        "x86_64-redox"
-      ],
-      "position": "/nix/store/pfx2nyxl1z2bnifcw5amxk0fq4g55pf7-nixpkgs/nixpkgs/pkgs/tools/misc/man-db/default.nix:90",
-      "unfree": false,
-      "unsupported": false
-    },
-    "name": "man-db-2.11.2",
-    "outputName": "",
-    "outputs": {
-      "out": null
-    },
-    "pname": "man-db",
-    "system": "x86_64-darwin",
-    "version": "2.11.2"
   }
 }

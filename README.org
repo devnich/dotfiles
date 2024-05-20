@@ -18,5 +18,10 @@
   2. http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
   3. https://medium.com/@waterkip/managing-my-dotfiles-with-gnu-stow-262d2540a866
 
-* Testing
-Git test 1
+* Generate manifest of current Nix applications
+#+BEGIN_SRC bash
+cd ~/dotfiles/nix
+
+nix-env -q --json --meta > nix_applications.json
+nix-env -q > nix_applications.txt
+#+END_SRC

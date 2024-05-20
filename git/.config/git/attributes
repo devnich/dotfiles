@@ -1,1 +1,4 @@
 # This may contain settings that map the nbdime diff and merge tools to .ipynb files
+*.ipynb	diff=jupyternotebook
+
+*.ipynb	merge=jupyternotebook

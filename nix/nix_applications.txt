@@ -20,6 +20,7 @@ nix-2.18.1
 nodejs-18.18.2
 nss-cacert-3.92
 pandoc-2.19.2
+perl5.38.2-LaTeXML-0.8.7
 poppler-utils-23.08.0
 proj-9.3.0
 ripgrep-13.0.0
