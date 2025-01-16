@@ -1,0 +1,16 @@
+{
+    "restore_source_documents": false,
+    "save_workspace": "never",
+    "load_workspace": false,
+    "initial_working_directory": "~",
+    "remove_history_duplicates": true,
+    "restore_last_project": false,
+    "insert_native_pipe_operator": true,
+    "highlight_r_function_calls": true,
+    "rainbow_parentheses": true,
+    "strip_trailing_whitespace": true,
+    "editor_keybindings": "emacs",
+    "syntax_color_console": true,
+    "enable_cloud_publish_ui": false,
+    "posix_terminal_shell": "zsh"
+}

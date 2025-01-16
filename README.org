@@ -5,13 +5,14 @@
 #+AUTHOR: Derek Devnich
 
 * Installation instructions
-  1. Download repository to "~/dotfiles"
+  1. Download repository to ~~/dotfiles~
   2. Symlink dotfiles to their correct locations using GNU Stow
      #+BEGIN_SRC bash
      cd dotfiles
      # Perform the stow command for each directory in ~/dotfiles, e.g.:
      stow zsh
      #+END_SRC
+  3. Exclude a file from being linked by adding the the filename to the ~.stow-local-ignore~ file
 
 * References
   1. https://www.gnu.org/software/stow/

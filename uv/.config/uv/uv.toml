@@ -1,0 +1,5 @@
+# Enable uv preview features; adding this to allow downloading Python executables
+# preview = true
+
+# Only allow explicit Python downloads
+# python-downloads = "manual"

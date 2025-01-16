@@ -1,13 +1,81 @@
+# ----------------------------
+# Colors
+# ----------------------------
+# `ls` colors, universal settings
+zstyle ':completion:*' list-colors ''
+export CLICOLOR=1
+
+# `ls` colors on Linux
+# eval "$(dircolors -b)"          # OR:
+# LS_COLORS="di=1;34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=36;43:su=30;41:sg=30;46:tw=1;34;47:ow=1;34;46"
+# export LS_COLORS
+# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+
+# `ls` colors on BSD and MacOS
+LSCOLORS="ExfxcxdxbxeggdabagEhEg"
+export LSCOLORS
+zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
+
+# GNU/Linux coreutils (and therefor nix) color alias
+alias ls="ls --color=auto --group-directories-first"
+alias gls="gls -h --color=auto --group-directories-first"
+
+# BSD color alias. Redundant if coreutils version of `ls` is installed
+# alias ls="ls -G"
+
+# Initialize colors
+autoload -U colors && colors
+
+# ----------------------------
+# Prompt
+# ----------------------------
 # Built-in prompts defined in /usr/share/zsh/<version>/functions
-# "oliver" prompt definition, obtained via `echo $PS1`:
-#     PROMPT='%B%F{default}%n %m:%~%$((COLUMNS-12))(l.%}. )[%h%1(j.%%%j.)%0(?..:%?)]%# %b%f%k'
+# e.g., the "oliver" prompt definition, obtained via `echo $PS1`, is:
+#   PROMPT='%B%F{default}%n %m:%~%$((COLUMNS-12))(l.%}. )[%h%1(j.%%%j.)%0(?..:%?)]%# %b%f%k'
 # prompt oliver
 
-# Show path in prompt
-PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
-# Don't show path in prompt
-# PROMPT='%B%F{default}%n@%m: %b%f%k'
+# Prompt documentation here:
+#   https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Visual-effects
+# Codes for xterm-256 colors here:
+#   https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
+#   https://ss64.com/bash/syntax-colors.html
 
+# Show path in prompt
+# PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
+PROMPT='%B%F{default}%n%F{red}@%F{default}%m:%F{022}%~%$%# %b%f%k'
+# Don't show path in prompt
+# PROMPT='%B%F{default}%n%F{red}@%F{default}%m: %b%f%k'
+
+# Initialize prompt
+autoload -Uz promptinit
+promptinit
+
+# ----------------------------
+# Completions
+# ----------------------------
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+# More universal settings
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+# ----------------------------
+# History
+# ----------------------------
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=10000
 SAVEHIST=10000
@@ -26,99 +94,76 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 
+# ----------------------------
+# Ergonomics
+# ----------------------------
 # Use emacs keybindings even if our EDITOR is set to vi
 bindkey -e
 
-# ls colors, universal settings
-zstyle ':completion:*' list-colors ''
-export CLICOLOR=1
+# ----------------------------
+# Nix settings
+# ----------------------------
+# Source Nix session variables
+source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
-# ls colors on Linux
-# eval "$(dircolors -b)"          # OR:
-# LS_COLORS="di=1;34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=36;43:su=30;41:sg=30;46:tw=1;34;47:ow=1;34;46"
-# export LS_COLORS
-# zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+# Give precedence to Nix-managed programs over system programs of the same name
+# (e.g., `ls`). This is currently executed in the system zshrc. In previous
+# installs, it was executed in the user's .zshrc:
+# if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi
 
-# ls colors on BSD and MacOS
-LSCOLORS="ExfxcxdxbxeggdabagEhEg"
-export LSCOLORS
-zstyle ':completion:*:default' list-colors ${(s.:.)LSCOLORS}
+# ----------------------------
+# Emacs
+# ----------------------------
+# Add shell integration for Emulate A Terminal [eat] package in Emacs
+[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && source "$EAT_SHELL_INTEGRATION_DIR/zsh"
 
-# GNU/Linux coreutils (and therefor nix) color alias
-alias ls="ls --color=auto --group-directories-first"
-alias gls="gls -h --color=auto --group-directories-first"
+# ----------------------------
+# Python and uv
+# ----------------------------
+# Add uv autocompletion
+eval "$(uv generate-shell-completion zsh)"
 
-# BSD color alias. Redundant if nix version of ls is installed
-# alias ls="ls -G"
+# Add uv-installed Pythons to the path
+export PATH="/Users/gilgamesh/.local/bin:$PATH"
 
-# Set up the prompt
-autoload -U colors && colors
-autoload -Uz promptinit
-promptinit
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-
-# More universal settings
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Nix configuration settings
-# This script needs to be executed in .zshrc to give precedence to .nix-profile applications.
-# When the script is executed in .zshenv, the default system paths such as
-# /usr/bin/ are prepended to the $PATH ahead of .nix-profile, which means the
-# shell uses the system default instead of the Nix version.
-if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
+# ----------------------------
+# Ruby
+# ----------------------------
 # Add Ruby Gems to path
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
 
-# Add shell integration for Emulate A Terminal [eat] package in Emacs
-[ -n "$EAT_SHELL_INTEGRATION_DIR" ] && source "$EAT_SHELL_INTEGRATION_DIR/zsh"
-
+# ----------------------------
+# Deprecated programs
+# ----------------------------
 # CLAN commands path; some names may conflict with other programs
 # export PATH="/Users/gilgamesh/Code/unix-clan/unix/bin:$PATH"
 
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/opt/anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/opt/anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# <<< conda initialize <<<
+
 # >>> mamba initialize >>>
 # !! Contents within this block are managed by 'mamba init' !!
-export MAMBA_EXE='/Users/gilgamesh/opt/bin/micromamba';
-export MAMBA_ROOT_PREFIX='/Users/gilgamesh/micromamba';
-__mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__mamba_setup"
-else
-    alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
-fi
-unset __mamba_setup
+# export MAMBA_EXE='/Users/gilgamesh/opt/bin/micromamba';
+# export MAMBA_ROOT_PREFIX='/Users/gilgamesh/micromamba';
+# __mamba_setup="$("$MAMBA_EXE" shell hook --shell zsh --root-prefix "$MAMBA_ROOT_PREFIX" 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__mamba_setup"
+# else
+#     alias micromamba="$MAMBA_EXE"  # Fallback on help from mamba activate
+# fi
+# unset __mamba_setup
 # <<< mamba initialize <<<

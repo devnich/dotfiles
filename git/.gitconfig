@@ -4,6 +4,7 @@
 [core]
 	autocrlf = input
 	editor = emacs
+	excludesfile = /Users/gilgamesh/.gitignore_global
 [init]
 	defaultBranch = main
 [push]
@@ -27,6 +28,14 @@
 	process = git-lfs filter-process
 	required = true
 
+# Settings for SourceTree
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
 # Unzip Office documents before running diff. For this to work, the project
 # archive must also have a .gitattributes file with the following line:
 #    *.docx diff=zip
@@ -35,16 +44,16 @@
 #       textconv = unzip -c -a
 
 # Settings for nbdime notebook diff/merge tool
-[diff "jupyternotebook"]
-	command = git-nbdiffdriver diff
-[merge "jupyternotebook"]
-	driver = git-nbmergedriver merge %O %A %B %L %P
-	name = jupyter notebook merge driver
-[difftool "nbdime"]
-	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
-[difftool]
-	prompt = false
-[mergetool "nbdime"]
-	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-[mergetool]
-	prompt = false
+# [diff "jupyternotebook"]
+#	command = git-nbdiffdriver diff
+# [merge "jupyternotebook"]
+#	driver = git-nbmergedriver merge %O %A %B %L %P
+#	name = jupyter notebook merge driver
+# [difftool "nbdime"]
+#	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+# [difftool]
+#	prompt = false
+# [mergetool "nbdime"]
+#	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+# [mergetool]
+#	prompt = false
