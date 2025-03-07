@@ -36,10 +36,11 @@
     # '')
 	pkgs.age
 	pkgs.coreutils
+        pkgs.csvkit
 	pkgs.darcs
 	pkgs.emacs
 	pkgs.fish
-	pkgs.fontconfig
+        pkgs.fontconfig
 	pkgs.ghostscript
 	pkgs.html-tidy
 	pkgs.htop
@@ -54,7 +55,7 @@
 	pkgs.nodejs
 	pkgs.pandoc
 	pkgs.perl540Packages.LaTeXML
-	pkgs.poppler_utils
+        pkgs.poppler
 	pkgs.proj
 	pkgs.ripgrep
 	pkgs.stow

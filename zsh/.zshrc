@@ -41,10 +41,12 @@ autoload -U colors && colors
 #   https://ss64.com/bash/syntax-colors.html
 
 # Show path in prompt
-# PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
 PROMPT='%B%F{default}%n%F{red}@%F{default}%m:%F{022}%~%$%# %b%f%k'
 # Don't show path in prompt
 # PROMPT='%B%F{default}%n%F{red}@%F{default}%m: %b%f%k'
+
+# Old extended prompt
+# PROMPT='%B%F{default}%n@%m:%~%$%# %b%f%k'
 
 # Initialize prompt
 autoload -Uz promptinit
@@ -106,10 +108,19 @@ bindkey -e
 # Source Nix session variables
 source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
-# Give precedence to Nix-managed programs over system programs of the same name
-# (e.g., `ls`). This is currently executed in the system zshrc. In previous
-# installs, it was executed in the user's .zshrc:
-# if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh; fi
+# The installer adds the following commands to the system zshrc. Unfortunately,
+# MacOS operating system upgrades overwrite this file.
+
+# Start Nix daemon
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
+# DEPRECATED: Give precedence to Nix-managed programs over system programs of
+# the same name (e.g., `ls`)
+# if [ -e /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh ]; then
+#     . /Users/gilgamesh/.nix-profile/etc/profile.d/nix.sh
+# fi
 
 # ----------------------------
 # Emacs
@@ -142,17 +153,17 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/opt/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/opt/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/Users/gilgamesh/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/gilgamesh/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/gilgamesh/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/gilgamesh/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # >>> mamba initialize >>>
