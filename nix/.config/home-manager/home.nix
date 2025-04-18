@@ -38,7 +38,9 @@
 	pkgs.coreutils
         pkgs.csvkit
 	pkgs.darcs
-	pkgs.emacs
+        # Temporary workaround for https://github.com/NixOS/nixpkgs/issues/395169
+        (pkgs.emacs.override { withNativeCompilation = false; })
+        # pkgs.emacs
 	pkgs.fish
         pkgs.fontconfig
 	pkgs.ghostscript
