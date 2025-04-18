@@ -6,9 +6,7 @@ zstyle ':completion:*' list-colors ''
 export CLICOLOR=1
 
 # `ls` colors on Linux
-# eval "$(dircolors -b)"          # OR:
-# LS_COLORS="di=1;34:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=36;43:su=30;41:sg=30;46:tw=1;34;47:ow=1;34;46"
-# export LS_COLORS
+# eval "$(dircolors -b)"   # Sets LS_COLORS value string and exports to Bash
 # zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # `ls` colors on BSD and MacOS
@@ -108,9 +106,8 @@ bindkey -e
 # Source Nix session variables
 source "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
 
-# The installer adds the following commands to the system zshrc. Unfortunately,
-# MacOS operating system upgrades overwrite this file.
-
+# The installer adds the following command to the system zshrc. MacOS OS updates
+# will overwrite this file, so we need to save it here:
 # Start Nix daemon
 if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
     . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
