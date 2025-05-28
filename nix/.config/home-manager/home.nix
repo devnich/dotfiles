@@ -34,36 +34,39 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
-	pkgs.age
-	pkgs.coreutils
-        pkgs.csvkit
-	pkgs.darcs
-        # Temporary workaround for https://github.com/NixOS/nixpkgs/issues/395169
-        # (pkgs.emacs.override { withNativeCompilation = false; })
-        pkgs.emacs
-	pkgs.fish
-        pkgs.fontconfig
-	pkgs.ghostscript
-	pkgs.html-tidy
-	pkgs.htop
-	pkgs.imagemagick
-	pkgs.ispell
-	pkgs.jdk
-        pkgs.julia-bin
-	pkgs.libxml2
-        pkgs.magic-wormhole
-	pkgs.man-db
-	pkgs.nano
-	pkgs.nodejs
-	pkgs.pandoc
-	pkgs.perl540Packages.LaTeXML
-        pkgs.poppler
-	pkgs.proj
-	pkgs.ripgrep
-	pkgs.stow
-	pkgs.tree
-        pkgs.uv
-	pkgs.wget
+    pkgs.age
+    pkgs.coreutils
+    pkgs.csvkit
+    pkgs.darcs
+    # Temporary workaround for https://github.com/NixOS/nixpkgs/issues/395169
+    # (pkgs.emacs.override { withNativeCompilation = false; })
+    pkgs.emacs
+    pkgs.fish
+    pkgs.fontconfig
+    pkgs.ghostscript
+    # Temporary workaround for https://debbugs.gnu.org/cgi/bugreport.cgi?bug=77944
+    #  BSD sed doesn't display man pages properly in Emacs
+    pkgs.gnused
+    pkgs.html-tidy
+    pkgs.htop
+    pkgs.imagemagick
+    pkgs.ispell
+    pkgs.jdk
+    pkgs.julia-bin
+    pkgs.libxml2
+    pkgs.magic-wormhole
+    pkgs.man-db
+    pkgs.nano
+    pkgs.nodejs
+    pkgs.pandoc
+    pkgs.perl540Packages.LaTeXML
+    pkgs.poppler
+    pkgs.proj
+    pkgs.ripgrep
+    pkgs.stow
+    pkgs.tree
+    pkgs.uv
+    pkgs.wget
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
