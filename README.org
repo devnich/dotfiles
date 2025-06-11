@@ -7,11 +7,12 @@
 * Installation instructions
   1. Download repository to ~~/dotfiles~
   2. Symlink dotfiles to their correct locations using GNU Stow
-     #+BEGIN_SRC bash
-     cd dotfiles
-     # Perform the stow command for each directory in ~/dotfiles, e.g.:
-     stow zsh
-     #+END_SRC
+   #+BEGIN_SRC bash
+   cd dotfiles
+
+   # Perform the stow command for each directory in ~/dotfiles, e.g.:
+   stow zsh
+   #+END_SRC
   3. Exclude a file from being linked by adding the the filename to the ~.stow-local-ignore~ file
 
 * References
@@ -20,9 +21,16 @@
   3. https://medium.com/@waterkip/managing-my-dotfiles-with-gnu-stow-262d2540a866
 
 * Generate manifest of current Nix applications
-#+BEGIN_SRC bash
-cd ~/dotfiles/nix
+1. Using Home Manager
+   #+BEGIN_SRC bash
+   cd ~/dotfiles/nix
 
-nix-env -q --json --meta > nix_applications.json
-nix-env -q > nix_applications.txt
-#+END_SRC
+   home-manager packages > nix_applications.txt
+   #+END_SRC
+2.  Using nix-env (deprecated)
+   #+BEGIN_SRC bash
+   cd ~/dotfiles/nix
+
+   nix-env -q --json --meta > nix_applications.json
+   nix-env -q > nix_applications.txt
+   #+END_SRC
